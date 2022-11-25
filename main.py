@@ -5,11 +5,11 @@ import tweepy
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import string
 import os
 import nltk
 import pycountry
 import re
-import string
 
 
 # Libs
@@ -42,8 +42,8 @@ paginator = tweepy.Paginator(
 tweet_list = []
 for tweet in paginator.flatten():
     tweet_list.append(tweet)
-    print(tweet)
+    #print(tweet)
 
 tweet_list_df = pd.DataFrame(tweet_list)
 tweet_list_df = pd.DataFrame(tweet_list_df['text'])
-tweet_list_df.head(5)
+print(tweet_list_df.head(5))
